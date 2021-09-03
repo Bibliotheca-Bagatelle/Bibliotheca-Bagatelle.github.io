@@ -6,7 +6,7 @@ function makeIntroPage() {
 function gotoViewer(book) {
     let bookName = book.innerText;
     console.log(bookName);
-    location.href = "viewer.html";
+    location.href = "dist/viewer.html";
 }
 
 if (document.querySelectorAll(".book")) {
