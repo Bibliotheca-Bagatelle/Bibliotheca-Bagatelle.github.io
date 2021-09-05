@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/interior.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="dist/interior.css" />
     <title>비블리오테카 바가텔에 오신것을 환영합니다.</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <header class="titleBar">책장</header>
-        <section class="library">
-            <div class="logo_box">
-                <div class="logo">Bibliotheca Bagatelle 로고</div>
-            </div>
-            <div class="bookshelfZone">
-                <div class="bookshelf_box">
-                    <ul class="bookshelf">
-                        <li class="book">
-                            <div class="book_cover">
-                                <span class="book_nameCard" >공지사항</span>
-                            </div>
-                        </li>
-                        <li class="book">
-                            <div class="book_cover">
-                                <span class="book_nameCard">세계관</span>
-                            </div>
-                        </li>
-                        <li class="book">
-                            <div class="book_cover">
-                                <span class="book_nameCard">시스템</span>
-                            </div>
-                        </li>
-                        <li class="book">
-                            <div class="book_cover">
-                                <span class="book_nameCard">Q&A</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bookshelf_box">
-                    <ul class="bookshelf">
-                        <li class="book">
-                            <div class="book_cover">
-                                <span class="book_nameCard" >공지사항</span>
-                            </div>
-                        </li>
-                        <li class="book">
-                            <div class="book_cover">
-                                <span class="book_nameCard">세계관</span>
-                            </div>
-                        </li>
-                        <li class="book">
-                            <div class="book_cover">
-                                <span class="book_nameCard">시스템</span>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </section>
-
+      <header class="titleBar">로비</header>
+      <section class="library">
+        <div class="schedule">
+          <h3>도서관 일정표</h3>
+          <div class="table_box">
+            <table>
+              <colgroup>
+                <col span="1" />
+                <col span="1" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>10월 n일</td>
+                  <td>대출신청 시작</td>
+                </tr>
+                <tr>
+                  <td>10월 m일</td>
+                  <td>대출신청 종료</td>
+                </tr>
+                <tr>
+                  <td>11월 n일</td>
+                  <td>개관</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="bookshelfZone">
+          <div class="bookshelf_box">
+            <ul class="bookshelf">
+              <li class="book">
+                <div class="book_cover" name="book_guide__notice"></div>
+                <span class="book_nameCard">공지사항</span>
+              </li>
+              <li class="book">
+                <div class="book_cover" name="book_guide__world"></div>
+                <span class="book_nameCard">세계관</span>
+              </li>
+              <li class="book">
+                <div class="book_cover" name="book_guide__system"></div>
+                <span class="book_nameCard">시스템</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <button href="" class="bookRequestBtn">도서대출신청</button>
+        <button href="" class="bookRequestBtn">문의하기</button>
+      </footer>
     </div>
     <!--
     모바일 환경일때 / 아닐때 살짝 다르게 표시 
@@ -75,5 +75,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="dist/index_script.js"></script>
-</body>
+  </body>
 </html>
