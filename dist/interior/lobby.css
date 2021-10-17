@@ -1,0 +1,173 @@
+/*로고*/
+.logo_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.logo_box .logo {
+  color: var(--sub-color);
+  width: 15em;
+  height: auto;
+}
+@media screen and (hover: hover) {
+}
+
+/* 정보 */
+.info_box p {
+  padding: 1em;
+  border-top: 1px solid var(--sub-color);
+  border-bottom: 1px solid var(--sub-color);
+  color: var(--main-color);
+  line-height: 130%;
+}
+marquee {
+  background-color: var(--sub-color);
+  line-height: 150%;
+  color: #fff;
+}
+
+/*일정표*/
+.schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0;
+}
+h3 {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.schedule .table_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.schedule table {
+  width: 100%;
+  line-height: 130%;
+}
+.schedule .schedule_date,
+.schedule .schedule_info {
+  width: 50%;
+}
+
+.schedule tr {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+}
+.schedule tr:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+.schedule tr:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.schedule td {
+  padding: 0.25em 0.5em;
+}
+.schedule tr > td:first-child {
+  background-color: rgba(73, 62, 62, 0.1);
+  color: var(--main-color);
+}
+.schedule span {
+  display: block;
+}
+.schedule .cellDesc {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 360px) {
+  .schedule .schedule_date,
+  .schedule .schedule_info {
+    width: 100%;
+  }
+
+  .schedule .table_box,
+  .schedule td {
+    width: 100%;
+  }
+  .schedule td {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 600px) {
+}
+
+/* 하단 박스 */
+.bottom_box {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.banner_box {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1em;
+}
+.monthlyBook {
+  width: 100%;
+  text-align: center;
+  margin: 0.5em 0 1em;
+}
+.qnaBtn {
+  padding: 1em;
+}
+.readyText {
+  margin: 0.75em auto;
+  width: 90%;
+  padding: 1.25em 0;
+  line-height: 150%;
+  color: var(--main-color);
+  font-size: 1.25em;
+  background-color: rgb(255, 253, 233);
+  box-shadow: 0 0.5em 0.75em rgba(107, 76, 76, 0.15);
+}
+.tweet_box {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (hover: hover) {
+  .bottom_box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .banner_box {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .tweet_box {
+    border-top: none;
+  }
+}
+
+/* 임베드 타임라인 */
+.tweet_box_title {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+.timeline-header,
+.timeline-footer {
+  display: none;
+}
+
+/* */
+.nanummyeongjo,
+.nanummyeongjo span {
+  font-family: "Nanum Myeongjo", serif;
+}
+.nanummpenscript,
+.nanummpenscript span {
+  font-family: "Nanum Pen Script", cursive;
+}

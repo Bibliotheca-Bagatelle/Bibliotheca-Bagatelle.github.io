@@ -1,0 +1,283 @@
+@import "reset.css";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  background-color: #fff;
+}
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+section {
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  margin-bottom: 1em;
+}
+button {
+  cursor: pointer;
+}
+/* 인트로 박스 */
+body.intro {
+  z-index: -1;
+  background: linear-gradient(#000, rgb(180, 180, 180));
+}
+body.intro.noclick {
+  pointer-events: none;
+}
+body.intro.blinkOut {
+  background: linear-gradient(rgb(207, 207, 207), rgb(255, 255, 255));
+}
+body.intro::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0;
+  background: #fff;
+}
+body.intro.blinkIn::before {
+  animation: fadein 1s;
+  animation-fill-mode: forwards;
+}
+body.intro.blinkOut::before {
+  animation: fadeout 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes introBlinkIn {
+  0% {
+    background: linear-gradient(#000, rgb(180, 180, 180));
+  }
+  100% {
+    background: #fff;
+  }
+}
+@keyframes introBlinkOut {
+  0% {
+    background: #fff;
+  }
+  100% {
+    background: linear-gradient(rgb(65, 65, 65), rgb(233, 233, 233));
+  }
+}
+
+.introBox {
+  width: 90%;
+}
+.introText {
+  width: 100%;
+  color: #fff;
+  opacity: 0;
+  text-align: center;
+  cursor: default;
+}
+@media screen and (hover: hover) {
+  .introText {
+    font-size: 18px;
+  }
+}
+.introText.s2 {
+  margin-bottom: 2em;
+}
+.descText {
+  color: rgb(209, 209, 209);
+  opacity: 0.5;
+  cursor: default;
+}
+.text.left {
+  text-align: left;
+}
+.text.right {
+  text-align: right;
+}
+.text.mid {
+  font-size: 1.15em;
+}
+.text.big {
+  font-size: 1.3em;
+}
+.text.shadow {
+  text-shadow: 0 0 0.3em #000;
+  z-index: 5;
+}
+.popupEmp {
+  position: absolute;
+  top: 40vh;
+  margin: 0 auto;
+}
+@media screen and (hover: hover) {
+  .text.mid {
+    font-size: 1.25em;
+  }
+  .text.big {
+    font-size: 1.5em;
+  }
+}
+
+/* 글자 애니메이션 */
+.fadeinBox {
+  animation: fadein 1s;
+  animation-fill-mode: forwards;
+}
+.fadeoutBox {
+  animation: fadeout 1s;
+  animation-fill-mode: forwards;
+}
+.showWordinBox {
+  opacity: 1;
+}
+@media screen and (hover: none) {
+  .showWordinBox.left {
+    justify-content: flex-start;
+    padding-right: 1.75em;
+  }
+  .showWordinBox.right {
+    justify-content: flex-start;
+    padding-left: 1.75em;
+  }
+}
+.showWordinBox span {
+  position: relative;
+  display: inline-block;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* 로그인 박스 */
+body.login {
+  background: linear-gradient(rgb(180, 180, 180), #fff);
+}
+.loginSection * {
+  margin-bottom: 1em;
+}
+.loginBox {
+  padding: 3em 2em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.1);
+}
+.loginInputWrap {
+  min-width: 15em;
+}
+
+.inputName {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+  text-align: center;
+  background-color: #fff;
+}
+.inputName:focus {
+  outline: none;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+}
+.loginDesc {
+  font-size: 0.9375em;
+  color: rgba(0, 0, 0, 0.5);
+}
+.setName {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.75em 1em;
+  border: none;
+  border-radius: 1.25em;
+  background-color: black;
+  color: #fff;
+}
+
+/* 입장 박스 */
+.entranceSection.multi {
+  color: #fff;
+}
+.entranceBox {
+  width: 100%;
+}
+.entranceBox > p {
+  text-align: center;
+  line-height: 150%;
+  padding: 0 1em;
+}
+
+/*폰트*/
+@font-face {
+  font-family: "DOSGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+
+.nanummyeongjo,
+.nanummyeongjo span {
+  font-family: "Nanum Myeongjo", serif;
+}
+.nanummpenscript,
+.nanummpenscript span {
+  font-family: "Nanum Pen Script", cursive;
+}
+
+.notoSerif,
+.notoSerif span {
+  font-family: "Noto Serif KR", "notokr-regular";
+}
+.gugi,
+.gugi span {
+  font-family: "Gugi", cursive;
+}
+.dohyun,
+.dohyun span {
+  font-family: "Do Hyeon", sans-serif;
+}
+.gowunbatang,
+.gowunbatang span {
+  font-family: "Gowun Batang", serif;
+}
+.gungseo,
+.gungseo span {
+  font-family: "궁서";
+}
+.dotum,
+.dotum span {
+  font-family: "돋움";
+}

@@ -7,73 +7,87 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
-    <link rel="stylesheet" href="dist/interior.css" />
     <title>비블리오테카 바가텔에 오신것을 환영합니다.</title>
+    <link
+      rel="shortcut icon"
+      href="dist/img/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="dist/img/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="dist/interior/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Gugi&family=Nanum+Myeongjo:wght@400;700&family=Nanum+Pen+Script&family=Noto+Serif+KR&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
-  <body>
+  <body class="intro">
     <div class="wrapper">
-      <header class="titleBar">로비</header>
-      <section class="library">
-        <div class="schedule">
-          <h3>도서관 일정표</h3>
-          <div class="table_box">
-            <table>
-              <colgroup>
-                <col span="1" />
-                <col span="1" />
-              </colgroup>
-              <tbody>
-                <tr>
-                  <td>10월 n일</td>
-                  <td>대출신청 시작</td>
-                </tr>
-                <tr>
-                  <td>10월 m일</td>
-                  <td>대출신청 종료</td>
-                </tr>
-                <tr>
-                  <td>11월 n일</td>
-                  <td>개관</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="bookshelfZone">
-          <div class="bookshelf_box">
-            <ul class="bookshelf">
-              <li class="book">
-                <div class="book_cover" name="book_guide__notice"></div>
-                <span class="book_nameCard">공지사항</span>
-              </li>
-              <li class="book">
-                <div class="book_cover" name="book_guide__world"></div>
-                <span class="book_nameCard">세계관</span>
-              </li>
-              <li class="book">
-                <div class="book_cover" name="book_guide__system"></div>
-                <span class="book_nameCard">시스템</span>
-              </li>
-            </ul>
-          </div>
+      <section class="IntroSection">
+        <div class="introBox box">
+          <p class="text descText fadeinBox">클릭해서 진행해주세요.</p>
+          <p class="text introText s1">옛날 어떤 장서수집가는 생각했습니다.</p>
+          <!-- 1 -->
+          <p class="text introText s1">
+            ‘아무도 읽지 않아서 버려지는 책들은 어떻게 되지?’
+          </p>
+          <p class="text introText s1">
+            ‘나는 이 책이 좋은데 왜 아무도 읽지 않는 거지?’
+          </p>
+          <p class="text introText s1">
+            그래서 그는 책을 읽는 사람들을 찾아 묻고 다녔습니다.
+          </p>
+
+          <!-- 2 -->
+          <p class="text introText gowunbatang s2 left">
+            "오래도록 사랑받는 이야기는 언제든 다시 읽혀지기 마련이죠."
+          </p>
+          <p class="text introText notoSerif s2 right">
+            “이건 졸문이에요. 꼴도 보기 싫다고요. 물론 읽어주면 고맙지만…”
+          </p>
+          <p class="text introText nanummpenscript big s2 left">
+            “어떤 책들은 아주 오래도록 읽혀져. 다시 읽고 싶어져. 추억을 부르지.”
+          </p>
+          <p class="text introText gugi s2 right">
+            “그냥 표지가 예쁘잖아요. 그래서 샀어요. 읽진 않지만.”
+          </p>
+          <p class="text introText gungseo s2 left">
+            "하지만 한 번도 펼쳐지지 않은 이야기들은…"
+          </p>
+          <p class="text introText dohyun mid s2 right">
+            “다신 펼치고 싶지 않은 책도 있는 법이야.”
+          </p>
+          <p
+            class="text introText nanummyeongjo s2 big shadow popupEmp"
+            style="margin-top: 1em"
+          >
+            “그렇지만. 모든 책들은 책장이 필요해.”
+          </p>
         </div>
       </section>
-      <footer>
-        <button href="" class="bookRequestBtn">도서대출신청</button>
-        <button href="" class="bookRequestBtn">문의하기</button>
-      </footer>
+
+      <section class="entranceSection hidden">
+        <div class="entranceBox box">
+          <p class="text entranceText nanummyeongjo mid">
+            비블리오테카 바가텔에 어서 오세요.
+          </p>
+          <p class="text entranceText nanummyeongjo mid">
+            모든 책들이 여러분을 환영합니다.
+          </p>
+        </div>
+      </section>
     </div>
-    <!--
-    모바일 환경일때 / 아닐때 살짝 다르게 표시 
-    시작이미지 띄워주고 fadeout으로 본화면 나오기(cover)
-    책장화면 / 리스트에서 클릭 시 뷰어로 페이지 넘어감
-    1. index(책장화면) - 1.1. 시작화면 
-    2. viewer(뷰어화면) - 2.1. 뷰어설정탭 
-    -->
-    <script
-      src="https://kit.fontawesome.com/7161175c87.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="dist/index_script.js"></script>
+
+    <script src="dist/system/anime.min.js"></script>
+    <script src="dist/system/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>비블리오테카 바가텔에 오신것을 환영합니다.</title>
+    <link
+      rel="shortcut icon"
+      href="../img/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="../img/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="../interior/bookshelf.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7161175c87.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="titleBar">서재</header>
+      <section class="library">
+        <div class="bookshelf_box">
+          <div class="bookshelf_tap">
+            <input type="radio" name="tap" id="publicBooks" class="hidden" checked></input>
+            <label for="publicBooks" class="publicBooks">공개서가</label>
+            <input type="radio" name="tap" id="loanBooks" class="hidden"></input>
+            <label for="loanBooks" class="loanBooks">대출서가</label>
+          </div>
+          <ul class="bookshelf">
+
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <button class="lobbyBtn">
+          <i class="fas fa-couch"></i>
+          <span>로비</span>
+        </button>
+        <button class="bookShelfBtn">
+          <i class="fas fa-book"></i>
+          <span>서재</span>
+        </button>
+        <button class="bookRequestBtn">
+          <i class="fas fa-file-alt"></i>
+          <span>대출신청</span>
+        </button>
+        <button
+          class="askLibraryBtn twitter-dm-button"
+          data-screen-name="ask @biblio_biba"
+        >
+          <i class="fas fa-question-circle"></i>
+          <span>문의하기</span>
+        </button>
+      </footer>
+    </div>
+
+    <script src="../system/footer.js"></script>
+    <script src="../system/bookshelf.js"></script>
+  </body>
+</html>

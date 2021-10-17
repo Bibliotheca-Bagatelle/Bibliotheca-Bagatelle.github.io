@@ -1,0 +1,84 @@
+@import "interior.css";
+
+/*책장*/
+.bookshelf_box {
+  width: 100%;
+}
+/*상단 탭박스*/
+.bookshelf_tap {
+  padding: 1em;
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.bookshelf_tap label {
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+.bookshelf_tap label::after {
+  content: "";
+  position: relative;
+  display: inline-block;
+
+  width: 1px;
+  height: 1em;
+  margin-left: 0.5em;
+  transform: translateY(25%);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.bookshelf_tap label:last-child::after {
+  display: none;
+}
+.bookshelf_tap input:checked + label {
+  color: #000;
+  font-weight: 600;
+}
+
+/*책 리스트*/
+.bookshelf {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+.emptyText {
+  width: 100%;
+  margin-top: 2em;
+  text-align: center;
+}
+.book {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.book_cover {
+  display: flex;
+  align-items: center;
+  width: 4.5em;
+  height: 6.5em;
+  background-color: var(--book-color);
+  box-shadow: 0px 5px 0.5em rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .book_cover {
+    width: 6.42em;
+    height: 9em;
+  }
+}
+.book_cover {
+  object-fit: cover;
+}
+.bookInfoBox {
+  margin-left: 1em;
+}
+.book_title {
+  width: 100%;
+  margin-bottom: 0.5em;
+  line-height: 150%;
+  color: var(--sub-font);
+}
+.book_writer {
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>비블리오테카 바가텔에 오신것을 환영합니다.</title>
+
+    <link
+      rel="shortcut icon"
+      href="../img/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="../img/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="../interior/interior.css" />
+    <link rel="stylesheet" href="../interior/lobby.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7161175c87.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="titleBar">로비</header>
+      <section class="library">
+        <div class="logo_box">
+          <img class="logo mid" src="../img/logo_mid.png" />
+        </div>
+
+        <div class="info_box">
+          <marquee
+            >비블리오테카 바가텔에 어서오세요. 현재 신간 준비중입니다.</marquee
+          >
+          <p>
+            02 | TWT | 창작판타지+메타픽션 | 시리어스 | 3W | 그림, Picrew인장 |
+            복합 | ALL | 조사+레이드 | 수위등급 2233 | 11월 5일 개장예정
+          </p>
+        </div>
+
+        <div class="schedule">
+          <h3 class="schedule_title nanummyeongjo">도서관 일정표</h3>
+          <div class="table_box nanummyeongjo">
+            <table class="scheduleTable">
+              <colgroup>
+                <col class="schedule_date" />
+                <col class="schedule_info" />
+              </colgroup>
+              <tbody>
+                <tr data-time="2021/10/15/00"></tr>
+
+                <tr data-time="2021/10/17/00">
+                  <td><span>10월 17일</span></td>
+                  <td><span>홈페이지 공개</span></td>
+                </tr>
+                <tr data-time="2021/10/20/00">
+                  <td><span>10월 20일~10월 23일</span></td>
+                  <td>신규작품(MPC) 공개</td>
+                </tr>
+                <tr class="hidden" data-time="2021/10/24/00"></tr>
+                <tr data-time="2021/10/25/00">
+                  <td><span>10월 25일 00시</span></td>
+                  <td>
+                    <span>대출신청 시작</span>
+                  </td>
+                </tr>
+                <tr data-time="2021/11/01/21">
+                  <td><span>11월 01일 21시</span></td>
+                  <td>
+                    <span>대출신청 종료</span>
+                  </td>
+                </tr>
+                <tr data-time="2021/11/03/21">
+                  <td><span>11월 03일 21시</span></td>
+                  <td>
+                    <span>합격 발표</span>
+                  </td>
+                </tr>
+                <tr data-time="2021/11/05/21">
+                  <td><span>11월 05일</span></td>
+                  <td>
+                    <span>개관</span>
+                    <span class="cellDesc">매주 화, 토 휴관일</span>
+                  </td>
+                </tr>
+                <tr data-time="2021/11/26/23">
+                  <td><span>11월 26일</span></td>
+                  <td><span>엔딩</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="bottom_box">
+          <div class="banner_box">
+            <ul class="monthlyBook">
+              <h3 class="nanummyeongjo">이달의 신간도서</h3>
+              <p class="readyText nanummpenscript">
+                10월 신간은 20일부터<br />
+                순서대로 들어옵니다. <br />-사서
+              </p>
+            </ul>
+
+            <!-- <div class="button_box">
+              <button class="qnaBtn">
+                <span>Q&A</span>
+              </button>
+            </div> -->
+          </div>
+          <div class="tweet_box">
+            <!-- <h3 class="tweet_box_title">도서관 SNS</h3> -->
+            <a
+              class="twitter-timeline"
+              data-height="400"
+              noheader
+              href="https://twitter.com/biblio_webiba?ref_src=twsrc%5Etfw"
+              >Tweets by biblio_webiba</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <button class="lobbyBtn">
+          <i class="fas fa-couch"></i>
+          <span>로비</span>
+        </button>
+        <button class="bookShelfBtn">
+          <i class="fas fa-book"></i>
+          <span>서재</span>
+        </button>
+        <button class="bookRequestBtn">
+          <i class="fas fa-file-alt"></i>
+          <span>대출신청</span>
+        </button>
+        <button
+          class="askLibraryBtn twitter-dm-button"
+          data-screen-name="ask @biblio_biba"
+        >
+          <i class="fas fa-question-circle"></i>
+          <span>문의하기</span>
+        </button>
+      </footer>
+    </div>
+    <script src="../system/footer.js"></script>
+    <script src="../system/lobby.js"></script>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+  </body>
+</html>

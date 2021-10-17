@@ -1,0 +1,161 @@
+/* 뷰어 */
+.viewer {
+  width: 100%;
+  height: 100%;
+}
+.viewer_wrapper {
+  padding: 2em 0;
+  height: 100%;
+  overflow-y: scroll;
+}
+.viewer_body {
+  height: 100%;
+  min-height: 90vh;
+}
+/* 스크롤할때만 스크롤 보이게! */
+.viewer_body.beige {
+  color: rgb(32, 11, 2);
+  background-color: rgb(241, 234, 225);
+}
+.viewer_body.dark {
+  color: #fff;
+  background-color: rgb(53, 53, 53);
+}
+
+/* 글자 꾸밈*/
+.viewer_body * {
+  line-height: 150%;
+  font-family: "Nanum Myeongjo", serif;
+}
+.viewer_body > * {
+  padding: 1em 2em;
+}
+.viewer_body h1 {
+  font-size: 1.5em;
+  text-align: center;
+}
+.viewer_body h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.viewer_body h4 {
+  padding: 1em 2em;
+  padding-bottom: 0;
+  font-weight: 600;
+}
+.viewer_body p {
+  padding: 1em 2em;
+  font-size: 1em;
+}
+@media screen and (hover: none) {
+  .viewer_body h4,
+  .viewer_body p {
+    padding: 1em 0.5em;
+    font-size: 1em;
+  }
+}
+
+.viewer_body .small {
+  font-size: 0.8em;
+}
+
+.viewer_body b {
+  font-weight: 600;
+}
+.viewer_body .red {
+  color: rgb(185, 0, 0);
+}
+.viewer_body .gray {
+  color: rgb(129, 129, 129);
+}
+.viewer_body .underline {
+  text-decoration: underline;
+}
+.viewer_body .blackbg {
+  background-color: #000;
+}
+
+.viewer_body .center {
+  text-align: center;
+}
+.viewer_body p.divisionLine {
+  padding-top: 0;
+  margin: 0 2em 0.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.viewer_menu {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25em 1em;
+  width: 100%;
+  background-color: var(--main-color);
+}
+.viewerBtn {
+  padding: 0.5em 1em;
+}
+
+/*==== footer ====*/
+footer.viewer_footer {
+}
+.menu_item {
+  display: flex;
+  width: 100%;
+  text-align: right;
+}
+.bookScroll {
+  width: 100%;
+  color: #fff;
+}
+
+/* 폰트 */
+
+/*폰트*/
+@font-face {
+  font-family: "DOSGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+
+.nanummyeongjo,
+.nanummyeongjo span {
+  font-family: "Nanum Myeongjo", serif;
+}
+.nanummpenscript,
+.nanummpenscript span {
+  font-family: "Nanum Pen Script", cursive;
+}
+.nanumgothic,
+.viewer_body .nanumgothic * {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.notoSerif,
+.notoSerif p .notoSerif span {
+  font-family: "Noto Serif KR", "notokr-regular";
+}
+.gugi,
+.gugi span {
+  font-family: "Gugi", cursive;
+}
+.dohyun,
+.dohyun span {
+  font-family: "Do Hyeon", sans-serif;
+}
+.gowunbatang,
+.gowunbatang span {
+  font-family: "Gowun Batang", serif;
+}
+.gungseo,
+.gungseo span {
+  font-family: "궁서";
+}
+.dotum,
+.dotum span {
+  font-family: "돋움";
+}
