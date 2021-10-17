@@ -226,7 +226,7 @@ function multipleVisitIntro(){
         setTimeout(function(){
             gotoLobby();
         }, 1000)
-    }, 3000);
+    }, 1500);
 }
 
 

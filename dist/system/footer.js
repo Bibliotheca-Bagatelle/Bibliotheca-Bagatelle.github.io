@@ -15,6 +15,7 @@ function clickAskLibraryBtn() {
     window.open("https://twitter.com/messages/compose?recipient_id=1433503860891389968");
 }
 
+
 //이벤트 리스너 연결
 if (document.querySelector(".lobbyBtn")) {
     document.querySelector(".lobbyBtn").addEventListener("click", clickLobbyBtn);
