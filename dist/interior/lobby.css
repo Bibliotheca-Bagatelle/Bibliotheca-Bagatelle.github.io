@@ -46,11 +46,14 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 .schedule table {
   width: 100%;
   line-height: 130%;
 }
+
 .schedule .schedule_date,
 .schedule .schedule_info {
   width: 50%;
@@ -59,11 +62,11 @@ h3 {
 .schedule tr {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
 }
-.schedule tr:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.4);
+.schedule tr.bold {
+  font-weight: 600;
 }
 .schedule tr:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: none;
 }
 .schedule td {
   padding: 0.25em 0.5em;
@@ -97,6 +100,9 @@ h3 {
   }
 }
 @media screen and (min-width: 600px) {
+  .schedule .table_box {
+    max-width: 70%;
+  }
 }
 
 /* 하단 박스 */

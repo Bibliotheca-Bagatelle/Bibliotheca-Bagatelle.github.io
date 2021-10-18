@@ -193,7 +193,7 @@ function firstVisitIntro(){
     }
     //로비로 이동
     function gotoLobby(){
-        localStorage.setItem("fadeOut", true);
+        // localStorage.setItem("fadeOut", true);
 
         if(localStorage.getItem("visitNumber")){
             localStorage.setItem("visitNumber", parseInt(localStorage.getItem("visitNumber"))+1);

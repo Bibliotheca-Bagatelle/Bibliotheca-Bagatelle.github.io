@@ -1,4 +1,3 @@
-// import { getBookInfo } from "./books_public";
 $(document).ready(function(){
     if(localStorage.getItem("book") != undefined){
         getBookData(localStorage.getItem("book"));
