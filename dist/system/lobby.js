@@ -21,14 +21,14 @@ function showSchedule(){
     const lastScheduleNum = scheduleArray.length-1;
     let nowScheduleNum = 0;
         
-    const timeArray = [
-        today.getFullYear(), today.getMonth()+1, today.getDate(), today.getHours()
-    ];
+    // const timeArray = [
+    //     today.getFullYear(), today.getMonth()+1, today.getDate(), today.getHours()
+    // ];
 
     scheduleArray.forEach((item, index)=>{
         item.split("/");
         new Date(item)
-        if(item >= today){
+        if(item <= today){
             nowScheduleNum = index;
         }
     });

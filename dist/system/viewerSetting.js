@@ -16,8 +16,12 @@ function toggleViewerNavBar() {
 }
 
 //스크롤 위치 계산
-function getScrollPosition() {
-    return Math.floor(($(window).scrollTop() / ($(document).height() - $(window).height())) * 100);
+function getScrollPercent() {
+    return Math.floor(( 
+        $(".viewer_wrapper").scrollTop() /
+        ($(".viewer_wrapper").prop("scrollHeight") 
+        - $(".viewer_wrapper").prop("clientHeight"))
+    ) * 100);
 }
 
 //뷰어 하단 바 버튼 동작
@@ -25,10 +29,10 @@ function clickViewerSetting() {
     console.log("뷰어 설정");
 }
 
-//뷰어 설정 버튼 동작
-function changePageColor() {
-    if(getScrollPosition() >= 0){
-        document.querySelector(".nowScroll").innerText = getScrollPosition();
+//스크롤 퍼센트 계산
+function changeScrollPercent() {
+    if(getScrollPercent() >= 0){
+        document.querySelector(".nowScroll").innerText = getScrollPercent();
     }else{
         document.querySelector(".nowScroll").innerText = 100;
     }
@@ -46,5 +50,5 @@ if (document.querySelector(".viewerSettingBtn")) {
 }
 
 if (document.querySelector(".bookScroll")) {
-    document.querySelector(".viewer").addEventListener("mousewheel", changePageColor);
+    document.querySelector(".viewer_wrapper").addEventListener("scroll", changeScrollPercent);
 }

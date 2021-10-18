@@ -5,7 +5,6 @@ $(document).ready(function(){
     }else{
         noData();
     }
-    // console.log(getScrollPosition());
 });
 
 //책 데이터
