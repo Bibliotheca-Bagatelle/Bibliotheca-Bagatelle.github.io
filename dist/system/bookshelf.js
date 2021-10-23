@@ -17,8 +17,39 @@ const publicBooks = [
         writer:"작가",
         cover: "../img/book_system.jpg",
     },
+    
+    {
+        id:"serverAdmin",
+        title:"서버관리자",
+        writer:"서버관리자",
+        cover: "../img/mpc_serverAdmin.jpg",
+        link:"https://url.kr/y9iht3",
+    },
+    {
+        id:"platform",
+        title:"플랫폼",
+        writer:"편집 시스템",
+        cover: "../img/mpc_platform.jpg",
+        link:"https://url.kr/mkouce",
+    },
+    {
+        id:"surffer",
+        title:"도서검색대 서퍼: 제품 사용 설명서",
+        writer:"도서검색대 서퍼",
+        cover: "../img/mpc_bookSearchDevice.jpg",
+        link:"https://url.kr/mps7wt",
+    },
+    
 ];
-const loanBooks = [];
+const loanBooks = [
+    {
+        id:"narrator",
+        title:"완결내지 못한 죄로 목숨을 위협받고 있습니다.",
+        writer:"화자",
+        cover: "../img/mpc_narrator.jpg",
+        link:"https://url.kr/oa9cpg",
+    },
+];
 
 getBooks(publicBooks);
 
@@ -40,7 +71,7 @@ function getBooks(bookArray){
         bookArray.forEach((item)=>{
             listItem += 
             `
-            <li class="book" data-title="${item.title}">
+            <li class="book" data-title="${item.title}" data-link="${item.link}">
                   <div>
                     <img
                       class="book_cover"
@@ -65,7 +96,11 @@ function getBooks(bookArray){
     
     document.querySelectorAll(".book").forEach((book) => {
         book.addEventListener("click", function () {
-            gotoViewer(book);
+            if(book.dataset.link === "undefined"){
+                gotoViewer(book);
+            }else{
+                window.open(book.dataset.link);
+            }
         });
     });
 }
