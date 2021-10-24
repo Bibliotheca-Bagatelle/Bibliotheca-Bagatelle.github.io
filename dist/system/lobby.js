@@ -1,5 +1,9 @@
 $(document).ready(function(){
     showSchedule();
+
+    document.querySelector(".readyText").addEventListener("click", function(){
+        window.open("https://docs.google.com/document/d/1R9ZqH_DnaRyLOUxT31aHsbQ1FERLWvyKODoFnRgBlQc/edit");
+    });
 });
 
 //일정표
@@ -28,13 +32,11 @@ function showSchedule(){
         return item;
     });
 
-    // console.log("schedule:", scheduleArray);
-    
-    // console.log(nowScheduleNum);
-    // console.log(scheduleArray[nowScheduleNum]);
     changeScheduleElemnt(nowScheduleNum);
 
 }
+
+
 
 function changeScheduleElemnt(scheduleNum){
     //움직이는 문구
@@ -66,8 +68,10 @@ function changeScheduleElemnt(scheduleNum){
 
         if(dDay > 0){
             marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 도서 대출 신청까지 ${dDay}일 ${dHour}시간 남았습니다.`);
-        }else{
+        }else if(dHour > 0){
             marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 도서 대출 신청까지 ${dHour}시간 남았습니다.`);
+        }else{
+            marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 도서 대출 신청이 곧 시작될 예정입니다.`);
         }
 
     }else if(scheduleNum === 4){
@@ -78,8 +82,10 @@ function changeScheduleElemnt(scheduleNum){
 
         if(dDay > 0){
             marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 현재 도서 대출 신청 기간입니다. 신청 마감까지 ${dDay}일 ${dHour}시간 남았습니다.`);
-        }else{
+        }else if(dHour > 0){
             marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 현재 도서 대출 신청 기간입니다. 신청 마감까지 ${dHour}시간 남았습니다.`);
+        }else{
+            marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 도서 대출 신청이 곧 마감될 예정입니다.`);
         }
         
     }else if(scheduleNum === 5){
@@ -104,5 +110,7 @@ function changeScheduleElemnt(scheduleNum){
         marquee.innerText = ("비블리오테카 바가텔의 여정에 함께해주신 모든 분들께 감사드립니다.");
     };
 }
+
+
 
 

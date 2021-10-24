@@ -136,6 +136,7 @@ h3 {
   font-size: 1.25em;
   background-color: rgb(255, 253, 233);
   box-shadow: 0 0.5em 0.75em rgba(107, 76, 76, 0.15);
+  cursor: pointer;
 }
 .tweet_box {
   width: 100%;
@@ -174,6 +175,10 @@ h3 {
   font-family: "Nanum Myeongjo", serif;
 }
 .nanummpenscript,
-.nanummpenscript span {
+.nanummpenscript span,
+.nanummpenscript strong {
   font-family: "Nanum Pen Script", cursive;
+}
+strong {
+  font-weight: 600;
 }
