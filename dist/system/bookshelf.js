@@ -39,6 +39,20 @@ const publicBooks = [
         cover: "../img/mpc_bookSearchDevice.jpg",
         link:"https://url.kr/mps7wt",
     },
+    {
+        id:"writer",
+        title:"[소장]작가",
+        writer:"작가",
+        cover: "../img/npc_writer_and_librarian.jpg",
+        link:"https://url.kr/ldea49",
+    },
+    {
+        id:"librarian",
+        title:"[소장]사서",
+        writer:"사서",
+        cover: "../img/npc_writer_and_librarian.jpg",
+        link:"https://url.kr/kuzmyh",
+    },
     
 ];
 const loanBooks = [
