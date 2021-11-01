@@ -76,14 +76,18 @@ function changeScheduleElemnt(scheduleNum){
 
     }else if(scheduleNum === 4){
         //대출신청 시작: 4
-        const dueDate = new Date(2021, 11-1, 01, 21);
+        const dueDate = new Date(2021, 11-1, 01, 24);
         const dDay = Math.floor((dueDate - today)/1000/60/60/24);
         const dHour = Math.floor((dueDate - today)/1000/60/60%24);
 
         if(dDay > 0){
             marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 현재 도서 대출 신청 기간입니다. 신청 마감까지 ${dDay}일 ${dHour}시간 남았습니다.`);
+        }else if(dHour > 3){
+            marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 현재 도서 대출 신청 기간입니다. 신청 마감까지 ${dHour-3}시간 남았습니다.`);
+        }else if(dHour == 3){
+            marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 현재 도서 대출 신청 기간입니다. 곧 연장 접수가 시작됩니다.`);
         }else if(dHour > 0){
-            marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 현재 도서 대출 신청 기간입니다. 신청 마감까지 ${dHour}시간 남았습니다.`);
+            marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 현재 도서 대출 신청 기간입니다. 연장 신청 마감까지 ${dHour}시간 남았습니다.`);
         }else{
             marquee.innerText = (`비블리오테카 바가텔에 어서오세요. 도서 대출 신청이 곧 마감될 예정입니다.`);
         }
