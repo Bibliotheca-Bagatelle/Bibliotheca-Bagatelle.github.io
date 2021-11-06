@@ -37,22 +37,26 @@
 }
 
 .viewer_body h2 {
-  margin: 1.5em 0 1em;
+  margin: 2em 0 1em;
   font-size: 1.25em;
   font-weight: 600;
 }
 .viewer_body h3 {
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
 .viewer_body h4 {
-  padding: 1em 2em 0;
+  padding: 2em 2em 0;
   padding-bottom: 0;
   font-weight: 600;
 }
 .viewer_body p {
-  padding: 1em 2em;
+  padding: 1.5em 2em 0.25em;
   font-size: 1em;
 }
+.viewer_body p.small {
+  padding-top: 0;
+}
+
 @media screen and (hover: none) {
   .viewer_body h4 {
     padding: 1em 0.5em 0;
@@ -87,7 +91,7 @@
   text-align: center;
 }
 .viewer_body p.divisionLine {
-  padding-top: 0;
+  /* padding-top: 1em; */
   margin: 0 2em 0.5em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
