@@ -18,7 +18,6 @@ function showSchedule(){
     });
     const lastScheduleNum = scheduleArray.length-1;
 
-     
 
     //날짜로 변환
     scheduleArray.forEach((item, index)=>{
@@ -109,9 +108,11 @@ function changeScheduleElemnt(scheduleNum){
             marquee.innerText = ("오늘은 도서관 휴관일입니다.");
         }
 
-    }else if(scheduleNum === 8){
+    }else if(scheduleNum >= 8){
         //엔딩 : 8
-        marquee.innerText = ("비블리오테카 바가텔의 여정에 함께해주신 모든 분들께 감사드립니다.");
+        //에필로그 보완기간 : 9
+        //종료 : 10
+        marquee.innerText = ("서버 점검이 종료되었습니다. 비블리오테카 바가텔의 여정에 함께해주신 모든 분들께 감사드립니다.");
     };
 }
 
